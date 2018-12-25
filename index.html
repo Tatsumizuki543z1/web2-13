@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>web2-13</title>
+</head>
+<script type="text/javascript" src="ncmb.min.js" charset="UTF-8"></script>
+<script>
+    //mobile backendとの連携
+    var ncmb = new NCMB("728920c9ead8e55bdde8e90da1bbad9ec9de632a6d893c5aa47ee8b763755879", "e9077fb90cd086aea6da71bd697439e8cc897d97eaa256e8fbb7948976f26870");
+
+    var TestClass = ncmb.DataStore("TestClass");
+
+    var testClass = new TestClass();
+    testClass.set("message", "Helo, NCMB!");
+    testClass.save()
+        .then(function(){
+            //保存に成功した場合の処理
+        })
+        .catch(function(err){
+            //保存に失敗したときの処理
+        })
+</script>
+</html>
